@@ -15,4 +15,16 @@ public class Item {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public int getPrice() {
+        return price;
+    }
 }

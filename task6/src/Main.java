@@ -20,12 +20,13 @@ public class Main {
             item.setWeight(Integer.parseInt(in.nextLine()));
             items.add(item);
 
-            System.out.print("If you want to stop enter the world stop: ");
+            System.out.print("If you want to stop enter the world stop, else - any key: ");
             String word = in.nextLine().toLowerCase();
             if (word.equals("stop")){
                 break;
             }
-
         }
+        PackBackpackService packBackpackService = new PackBackpackService(backPack, items);
+
     }
 }
