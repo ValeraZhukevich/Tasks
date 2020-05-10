@@ -13,11 +13,24 @@ public class BackPack {
         items = new ArrayList<>();
     }
 
-    public void addItem(Item item){
+    public int getLoadWeight() {
+        return loadWeight;
+    }
+
+    public int getCurrentWeight() {
+        return currentWeight;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public boolean addItem(Item item){
         if (item.getWeight() <= loadWeight - currentWeight){
             items.add(item);
             currentWeight += item.getWeight();
+            return true;
         }
-
+        return false;
     }
 }

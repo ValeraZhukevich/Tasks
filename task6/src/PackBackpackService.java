@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class PackBackpackService {
@@ -7,5 +8,14 @@ public class PackBackpackService {
     public PackBackpackService(BackPack backPack, List<Item> items) {
         this.backPack = backPack;
         this.items = items;
+    }
+
+    public BackPack puck(){
+        UnitPriceComparator unitPriceComparator = new UnitPriceComparator();
+        items.sort(unitPriceComparator);
+        for (Item item : items){
+            backPack.addItem(item);
+        }
+        return backPack;
     }
 }
