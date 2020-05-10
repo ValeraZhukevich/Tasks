@@ -17,7 +17,7 @@ public class Main {
             System.out.print("Input a weight of item, kg: ");
             item.setWeight(Integer.parseInt(in.nextLine()));
             System.out.print("Input a price of item: ");
-            item.setWeight(Integer.parseInt(in.nextLine()));
+            item.setPrice(Integer.parseInt(in.nextLine()));
             items.add(item);
 
             System.out.print("If you want to stop enter the world stop, else - any key: ");
@@ -26,7 +26,10 @@ public class Main {
                 break;
             }
         }
+        System.out.println("hasdjklasjd");
         PackBackpackService packBackpackService = new PackBackpackService(backPack, items);
+        PrintBackpuckInfo printBackpuckInfo = new PrintBackpuckInfo(packBackpackService.puck());
+        printBackpuckInfo.printInfo();
 
     }
 }

@@ -14,6 +14,7 @@ public class PackBackpackService {
         UnitPriceComparator unitPriceComparator = new UnitPriceComparator();
         items.sort(unitPriceComparator);
         for (Item item : items){
+            System.out.println(item);
             backPack.addItem(item);
         }
         return backPack;

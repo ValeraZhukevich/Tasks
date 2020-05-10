@@ -25,12 +25,11 @@ public class BackPack {
         return items;
     }
 
-    public boolean addItem(Item item){
+    public void addItem(Item item){
         if (item.getWeight() <= loadWeight - currentWeight){
             items.add(item);
             currentWeight += item.getWeight();
-            return true;
         }
-        return false;
+
     }
 }
